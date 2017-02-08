@@ -26,24 +26,55 @@
 @implementation ViewController
 
 
+#pragma mark -- 强引用和弱引用的区别 ： 02布局上的区别
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    [self.view addSubview:self.weakView];
+    //弱引用和强引用布局的区别：弱引用可以直接布局，强引用需要添加到self.view上
+    [self.view addSubview:self.strongView];
+    NSLog(@"--->%@",self.weakView);
+    
 }
 
+#pragma mark -- 强引用和弱引用的区别 ： 03移除上的区别
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [_weakView removeFromSuperview];
+    [_strongView removeFromSuperview];
+    //_strongView = nil;从父视图移除后，强引用的视图还未释放，需要置为nil来释放
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self checkWeakView];
+    });
+}
+
+#pragma mark -- 强引用和弱引用的区别 ： 03移除上的区别
+//重点：涉及到理解强弱指针，执行上述代码后，视图上会出现两个view，点击空白的地方，移除掉两个view，1秒后看下，1秒后看是因为这个方法，运行到结束的括号之后，才会把view移除掉，此时控制台的_weakView = nil;_strongView还是存在的，因为即使从父视图上移除，self本身还是对其还有一个强引用，不会被释放掉，如果想要释放，则在[_strongView removeFromSuperview];之后添加_strongView = nil;
+- (void)checkWeakView{
+    
+    NSLog(@"weakView: %@",_weakView);
+    NSLog(@"strongView: %@",_strongView);
+}
+
+#pragma mark -- 强引用和弱引用的区别 ： 01写法上的区别
 - (UIView *)weakView{
     if (!_weakView) {
-        //弱引用，
-        UIView *weakView = [[UIView alloc]init];
+        UIView *weakView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
         _weakView = weakView;
         _weakView.backgroundColor = [UIColor redColor];
+        [self.view addSubview:_weakView];
+    
+        //01、必须使用UIView *weakView = [[UIView alloc] init，不能用_weakView，会报错，等号右边创建了后给了一个弱引用持有，相当于是没有持有，就直接释放了；而等号左边的UIView *weakView默认是一个强引用，会暂时持有保住它，但是生命周期就在这个懒加载的大括号内，所以会有其他代码配合使这个view存活下来，不被释放
+        //02、_weakView = weakView;这句代码为赋值操作，基本作用等同于强引用的_strongView = [UIView alloc]init];
+        //03、[self.view addSubview:self.weakView];如第一条，给这个view加到一个不会被释放的view上即self.view,使weakView保存下来
     }
     return _weakView;
 }
 
+#pragma mark -- 强引用和弱引用的总结
+//总结起来的话，如果理解的到位，使用强弱都没有问题，但是一般来说，由于弱引用会被及时释放掉，同时，weak在对象消失后自动把指针变成nil，所以需求允许的化，一般建议使用弱引用；根据需求，如果是一个view从父视图移除后再添加回来，就需要使用强引用
 - (UIView *)strongView{
     if (!_strongView) {
-        _strongView = [[UIView alloc]init];
+        _strongView = [[UIView alloc]initWithFrame:CGRectMake(100, 100, 60, 60)];
         _strongView.backgroundColor = [UIColor greenColor];
     }
     return _strongView;
