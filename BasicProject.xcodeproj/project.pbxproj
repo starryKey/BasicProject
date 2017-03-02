@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1523D05D1E4BF92C002EE474 /* AutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1523D05C1E4BF92C002EE474 /* AutoLayoutViewController.m */; };
+		1523D0771E4C6E5B002EE474 /* DSSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1523D0751E4C6E5B002EE474 /* DSSTextView.m */; };
+		1523D0781E4C6E5B002EE474 /* DSSTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1523D0761E4C6E5B002EE474 /* DSSTextView.xib */; };
 		157123E91E484E92001F28EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 157123E81E484E92001F28EE /* main.m */; };
 		157123EC1E484E92001F28EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 157123EB1E484E92001F28EE /* AppDelegate.m */; };
 		157123EF1E484E92001F28EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 157123EE1E484E92001F28EE /* ViewController.m */; };
@@ -47,6 +50,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1523D05B1E4BF92C002EE474 /* AutoLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutViewController.h; sourceTree = "<group>"; };
+		1523D05C1E4BF92C002EE474 /* AutoLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutViewController.m; sourceTree = "<group>"; };
+		1523D0741E4C6E5B002EE474 /* DSSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSTextView.h; sourceTree = "<group>"; };
+		1523D0751E4C6E5B002EE474 /* DSSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSTextView.m; sourceTree = "<group>"; };
+		1523D0761E4C6E5B002EE474 /* DSSTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSSTextView.xib; sourceTree = "<group>"; };
 		157123E41E484E92001F28EE /* BasicProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		157123E81E484E92001F28EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		157123EA1E484E92001F28EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,6 +126,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1523D05A1E4BF90D002EE474 /* AutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				1523D0741E4C6E5B002EE474 /* DSSTextView.h */,
+				1523D0751E4C6E5B002EE474 /* DSSTextView.m */,
+				1523D0761E4C6E5B002EE474 /* DSSTextView.xib */,
+				1523D05B1E4BF92C002EE474 /* AutoLayoutViewController.h */,
+				1523D05C1E4BF92C002EE474 /* AutoLayoutViewController.m */,
+			);
+			path = AutoLayout;
+			sourceTree = "<group>";
+		};
 		157123DB1E484E92001F28EE = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +162,7 @@
 		157123E61E484E92001F28EE /* BasicProject */ = {
 			isa = PBXGroup;
 			children = (
+				1523D05A1E4BF90D002EE474 /* AutoLayout */,
 				157124601E49E833001F28EE /* PropertyExample */,
 				157124531E49897E001F28EE /* CLan */,
 				157123EA1E484E92001F28EE /* AppDelegate.h */,
@@ -341,6 +362,7 @@
 				157124351E4953F1001F28EE /* Info.plist in Resources */,
 				157123F71E484E92001F28EE /* LaunchScreen.storyboard in Resources */,
 				157123F41E484E92001F28EE /* Assets.xcassets in Resources */,
+				1523D0781E4C6E5B002EE474 /* DSSTextView.xib in Resources */,
 				157123F21E484E92001F28EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,7 +388,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1523D05D1E4BF92C002EE474 /* AutoLayoutViewController.m in Sources */,
 				1571243D1E4953F1001F28EE /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				1523D0771E4C6E5B002EE474 /* DSSTextView.m in Sources */,
 				1571243B1E4953F1001F28EE /* MASViewConstraint.m in Sources */,
 				157124361E4953F1001F28EE /* MASCompositeConstraint.m in Sources */,
 				1571243C1E4953F1001F28EE /* NSArray+MASAdditions.m in Sources */,
@@ -609,6 +633,7 @@
 				157124131E484E93001F28EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		157124141E484E93001F28EE /* Build configuration list for PBXNativeTarget "BasicProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -617,6 +642,7 @@
 				157124161E484E93001F28EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		157124171E484E93001F28EE /* Build configuration list for PBXNativeTarget "BasicProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -625,6 +651,7 @@
 				157124191E484E93001F28EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

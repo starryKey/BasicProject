@@ -6,6 +6,18 @@
 //  Copyright © 2017年 www.dahuatech.com. All rights reserved.
 //
 
+//磁盘剩余空间
+//+ (double)freeDiskSpaceInMBytes
+//{
+//    struct statfs buf;
+//    long long freespace = -1;
+//    if(statfs("/var", &buf) >= 0)
+//    {
+//        freespace = (long long)(buf.f_bsize * buf.f_bfree);
+//    }
+//    return freespace/(1024.0*1024.0);
+//}
+
 #import "ViewController.h"
 #import <objc/Object.h>
 #import <objc/runtime.h>
@@ -15,6 +27,7 @@
 @property (nonatomic, strong) UIView    *strongView;
 @property (nonatomic, copy)   NSString  *str;
 @property (nonatomic, assign) NSInteger nCount;
+@property (atomic, copy)NSString *testStr;
 //用Objective-C等面向对象语言编程时，‘对象’（object）就是“基本构造单元”，开发者可以通过对象来存储并传递数据，在对象之间传递数据并执行任务的过程就叫消息传递，当程序运行起来后，为其提供相关支持的代码叫做“Objective-C运行期环境”（Objective-C runtime）,它提供了一些使得对象之间能够传递消息的重要函数，并且包含创建类实例使用的全部逻辑。
 
 //assign  '设置方法' 只会执行针对‘纯量类型’的简单赋值操作
