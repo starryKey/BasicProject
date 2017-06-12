@@ -10,6 +10,10 @@
 		1523D05D1E4BF92C002EE474 /* AutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1523D05C1E4BF92C002EE474 /* AutoLayoutViewController.m */; };
 		1523D0771E4C6E5B002EE474 /* DSSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1523D0751E4C6E5B002EE474 /* DSSTextView.m */; };
 		1523D0781E4C6E5B002EE474 /* DSSTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1523D0761E4C6E5B002EE474 /* DSSTextView.xib */; };
+		1551D9991E712F6000DBE123 /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1551D9981E712F6000DBE123 /* TestTableViewController.m */; };
+		1551D99B1E71329100DBE123 /* device_favorites_n@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1551D99A1E71329100DBE123 /* device_favorites_n@2x.png */; };
+		1551D99D1E714A7600DBE123 /* favorite_next_n@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1551D99C1E714A7600DBE123 /* favorite_next_n@2x.png */; };
+		1551D9A01E722E8A00DBE123 /* IPV6ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1551D99F1E722E8A00DBE123 /* IPV6ViewController.m */; };
 		157123E91E484E92001F28EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 157123E81E484E92001F28EE /* main.m */; };
 		157123EC1E484E92001F28EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 157123EB1E484E92001F28EE /* AppDelegate.m */; };
 		157123EF1E484E92001F28EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 157123EE1E484E92001F28EE /* ViewController.m */; };
@@ -55,6 +59,12 @@
 		1523D0741E4C6E5B002EE474 /* DSSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSTextView.h; sourceTree = "<group>"; };
 		1523D0751E4C6E5B002EE474 /* DSSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSTextView.m; sourceTree = "<group>"; };
 		1523D0761E4C6E5B002EE474 /* DSSTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSSTextView.xib; sourceTree = "<group>"; };
+		1551D9971E712F6000DBE123 /* TestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewController.h; sourceTree = "<group>"; };
+		1551D9981E712F6000DBE123 /* TestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; };
+		1551D99A1E71329100DBE123 /* device_favorites_n@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "device_favorites_n@2x.png"; sourceTree = "<group>"; };
+		1551D99C1E714A7600DBE123 /* favorite_next_n@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorite_next_n@2x.png"; sourceTree = "<group>"; };
+		1551D99E1E722E8A00DBE123 /* IPV6ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPV6ViewController.h; sourceTree = "<group>"; };
+		1551D99F1E722E8A00DBE123 /* IPV6ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPV6ViewController.m; sourceTree = "<group>"; };
 		157123E41E484E92001F28EE /* BasicProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		157123E81E484E92001F28EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		157123EA1E484E92001F28EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -138,6 +148,19 @@
 			path = AutoLayout;
 			sourceTree = "<group>";
 		};
+		1551D9961E712D0200DBE123 /* UITableViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				1551D99C1E714A7600DBE123 /* favorite_next_n@2x.png */,
+				1551D99A1E71329100DBE123 /* device_favorites_n@2x.png */,
+				1551D9971E712F6000DBE123 /* TestTableViewController.h */,
+				1551D9981E712F6000DBE123 /* TestTableViewController.m */,
+				1551D99E1E722E8A00DBE123 /* IPV6ViewController.h */,
+				1551D99F1E722E8A00DBE123 /* IPV6ViewController.m */,
+			);
+			path = UITableViewExample;
+			sourceTree = "<group>";
+		};
 		157123DB1E484E92001F28EE = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +188,7 @@
 				1523D05A1E4BF90D002EE474 /* AutoLayout */,
 				157124601E49E833001F28EE /* PropertyExample */,
 				157124531E49897E001F28EE /* CLan */,
+				1551D9961E712D0200DBE123 /* UITableViewExample */,
 				157123EA1E484E92001F28EE /* AppDelegate.h */,
 				157123EB1E484E92001F28EE /* AppDelegate.m */,
 				157123ED1E484E92001F28EE /* ViewController.h */,
@@ -364,6 +388,8 @@
 				157123F41E484E92001F28EE /* Assets.xcassets in Resources */,
 				1523D0781E4C6E5B002EE474 /* DSSTextView.xib in Resources */,
 				157123F21E484E92001F28EE /* Main.storyboard in Resources */,
+				1551D99B1E71329100DBE123 /* device_favorites_n@2x.png in Resources */,
+				1551D99D1E714A7600DBE123 /* favorite_next_n@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +418,7 @@
 				1571243D1E4953F1001F28EE /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				1523D0771E4C6E5B002EE474 /* DSSTextView.m in Sources */,
 				1571243B1E4953F1001F28EE /* MASViewConstraint.m in Sources */,
+				1551D9991E712F6000DBE123 /* TestTableViewController.m in Sources */,
 				157124361E4953F1001F28EE /* MASCompositeConstraint.m in Sources */,
 				1571243C1E4953F1001F28EE /* NSArray+MASAdditions.m in Sources */,
 				157123EF1E484E92001F28EE /* ViewController.m in Sources */,
@@ -402,6 +429,7 @@
 				157124631E49E84F001F28EE /* PropertyViewController.m in Sources */,
 				1571243E1E4953F1001F28EE /* View+MASAdditions.m in Sources */,
 				1571243A1E4953F1001F28EE /* MASViewAttribute.m in Sources */,
+				1551D9A01E722E8A00DBE123 /* IPV6ViewController.m in Sources */,
 				157124371E4953F1001F28EE /* MASConstraint.m in Sources */,
 				157124381E4953F1001F28EE /* MASConstraintMaker.m in Sources */,
 			);

@@ -11,6 +11,39 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Test Table View Controller-->
+        <scene sceneID="bgf-v8-4gD">
+            <objects>
+                <viewController id="TyW-WM-EUg" customClass="TestTableViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fEE-0g-SCS"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Ta-R1-BKg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0ee-HD-JbN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LQ8-dt-oke">
+                                <rect key="frame" x="0.0" y="86" width="375" height="524"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Ta-R1-BKg" firstAttribute="top" secondItem="LQ8-dt-oke" secondAttribute="bottom" constant="57" id="M2N-v1-1ox"/>
+                            <constraint firstAttribute="trailing" secondItem="LQ8-dt-oke" secondAttribute="trailing" id="VKT-hV-IYy"/>
+                            <constraint firstItem="LQ8-dt-oke" firstAttribute="leading" secondItem="0ee-HD-JbN" secondAttribute="leading" id="Xm6-2c-Mde"/>
+                            <constraint firstItem="LQ8-dt-oke" firstAttribute="top" secondItem="fEE-0g-SCS" secondAttribute="bottom" constant="66" id="bPa-E9-9QP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="favTableView" destination="LQ8-dt-oke" id="Oce-2Q-hmd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c6S-Ys-pUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1942" y="151"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -28,10 +61,9 @@
                                 <color key="backgroundColor" red="1" green="0.038735201560000002" blue="0.081156715749999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evb-0V-qRw">
-                                <rect key="frame" x="-829" y="384.5" width="1163" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="1265" translatesAutoresizingMaskIntoConstraints="NO" id="evb-0V-qRw">
+                                <rect key="frame" x="334" y="405" width="0.0" height="0.0"/>
                                 <color key="backgroundColor" red="0.412198591" green="0.87563131309999997" blue="0.25046947629999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Labelsfsdfksdklflklskdlfksdiovsdnfjsdflselowjfuadsjajdiuaejksdhjfiwoeijjioifjhusuerurt812ij8ae4hnnaweunjkdnjaslfdndjwaiuejnciuamdjanweucnzaisddssdff</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -71,6 +103,13 @@
                                     <constraint firstItem="aR9-HR-qSb" firstAttribute="leading" secondItem="Kpi-tl-2N0" secondAttribute="leading" constant="60" id="yWf-Nc-8CV"/>
                                 </constraints>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Labelasdfijosdjfksdfklkfssddfkdfgkgkkaksdfkl;;lfsd" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qpx-VP-a2F">
+                                <rect key="frame" x="111" y="224" width="145" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -89,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-911" y="117"/>
+            <point key="canvasLocation" x="-996" y="89.505247376311857"/>
         </scene>
     </scenes>
 </document>

@@ -14,4 +14,5 @@
 
 - (void)chooseImgView:(UIImage *)img;
 - (void)controlRightBtn:(BOOL)hidden;
+
 @end
